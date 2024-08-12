@@ -14,7 +14,7 @@ const Banner = () => {
       <header>
         <div
           className="w-full bg-center bg-cover h-[38rem]"
-          style={{ backgroundImage: "url('https://i.ibb.co/6NrzPct/04.jpg')" }}
+          style={{ backgroundImage: "url('https://i.ibb.co/vqydw7P/top-view-homemade-delicious-sandwich-plate-left-side-stained-white-surface.jpg')" }}
         >
           <div className="flex items-center justify-center w-full h-full bg-gray-900/40">
             <div className="text-center">

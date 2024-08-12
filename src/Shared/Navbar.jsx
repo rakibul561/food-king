@@ -13,11 +13,12 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import img1 from '../../src/assets/banner/pngtree-food-logo-png-image_5297921.png'
+import { Typewriter } from 'react-simple-typewriter';
 
 const pages = [
-  { name: 'items', link: '/items' },
-  { name: 'Pricing', link: '/pricing' },
-  { name: 'Blog', link: '/blog' }
+  { name: 'Home', link: '/' },
+  { name: 'Our Menu', link: '/ourmenu' },
+  { name: 'Order Food', link: '/orderfood' }
 ];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -44,28 +45,22 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
 
-          <div className='w-12'>
-            <img src={img1} alt="" />
-          </div>
-          {/* <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography> */}
+
+          <h1 className=" font-semibold text-white ">
+             <span className=" hidden font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient">
+              <Typewriter
+                words={['Food King ']}
+                loop={5}
+                cursor
+                cursorStyle="_"
+                typeSpeed={100}
+                deleteSpeed={70}
+                delaySpeed={1000}
+              />
+            </span>
+          </h1>
+
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -106,7 +101,6 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -123,7 +117,17 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            <span className=" bg-gradient-to-r bg-300% from-primary via-blue-500 to-secondary text-transparent bg-clip-text animate-gradient">Food king</span>
+
+            <Typewriter
+
+              words={['Food King ', 'Your Food Hub']}
+              loop={5}
+              cursor
+              cursorStyle="_"
+              typeSpeed={100}
+              deleteSpeed={70}
+              delaySpeed={1000}
+            />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
